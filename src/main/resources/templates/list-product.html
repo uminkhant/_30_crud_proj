@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{layout/masterLayout.html::layout(~{::main})}" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<main role="main">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Product Table</h3>
+                    </div>
+                    <div class="card-body">
+                        <div th:replace="fragments/list-product.html :: productTable"></div>
+                    </div>
+                </div>
+                <a href="#" th:href="@{/product}" class="btn btn-info w-100">Home</a>
+            </div>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>

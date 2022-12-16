@@ -3,6 +3,7 @@ package com.example._28_crud_proj.ds;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -17,7 +18,8 @@ public class Product {
     private String name;
     private int quantity;
     private double price;
-    private LocalDate lastUpdate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate lastUpdated;
 
     @ManyToOne
     private Category category;

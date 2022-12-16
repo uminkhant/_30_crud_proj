@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<table class="table table-striped" th:fragment="productTable" >
+
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Last Update</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="pro:${products}">
+    <td th:text="${pro.id}"></td>
+    <td th:text="${pro.name}"></td>
+    <td th:text="${pro.category.name}"></td>
+    <td th:text="${pro.quantity}"></td>
+    <td th:text="${pro.price}"></td>
+    <td th:text="${pro.lastUpdated}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
